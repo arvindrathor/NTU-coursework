@@ -1,0 +1,21 @@
+Circuit: * C:\Users\ArvindNeeraj\Downloads\cad optimization\R10943157_finalexam\Q2\Q2d.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Fri Jun 17 10:06:16 2022
+Total elapsed time: 0.059 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 491
+traniter = 488
+tranpoints = 245
+accept = 241
+rejected = 4
+matrix size = 6
+fillins = 0
+solver = Normal
+Matrix Compiler1: 164 bytes object code size  0.1/0.1/[0.1]
+Matrix Compiler2: off  [0.1]/0.1/0.1
+
