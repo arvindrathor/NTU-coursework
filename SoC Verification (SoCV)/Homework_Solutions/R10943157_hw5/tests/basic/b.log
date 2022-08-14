@@ -1,0 +1,88 @@
+Script started on Sun 15 May 2022 01:17:05 AM CST
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ exit./satv -File a.dofile [1P[1@b
+v3> read rtl b.v
+
+v3> blast ntk
+
+v3> satv itp -o 0
+
+Monitor "p1" is safe.
+
+v3> usage
+Period time used : 0.06 seconds
+Total time used  : 0.06 seconds
+Peak memory used   : 10.34 M Bytes
+Total memory used  : 4.062 M Bytes
+Current memory used: 12.57 M Bytes
+
+v3> satv itp -o 1
+
+Monitor "p2" is safe.
+
+v3> usage
+Period time used : 0.89 seconds
+Total time used  : 0.95 seconds
+Peak memory used   : 12.72 M Bytes
+Total memory used  : 5.98 M Bytes
+Current memory used: 14.48 M Bytes
+
+v3> satv itp -o 2
+
+Monitor "p3" is violated.
+0: 1
+1: 1
+2: 1
+3: 1
+4: 1
+5: 1
+6: 1
+7: 1
+8: 1
+9: 1
+10: 1
+11: 1
+12: 1
+13: 1
+14: 1
+15: 1
+16: 1
+17: 1
+18: 1
+19: 1
+20: 1
+21: 1
+22: 1
+23: 1
+24: 1
+25: 1
+26: 1
+27: 1
+28: 1
+29: 1
+30: 1
+31: 1
+32: 1
+33: 1
+34: 1
+35: 1
+36: 1
+37: 1
+38: 1
+39: 1
+40: 1
+41: 1
+42: x
+
+v3> usage
+Period time used : 103.5 seconds
+Total time used  : 104.4 seconds
+Peak memory used   : 101.5 M Bytes
+Total memory used  : 58.18 M Bytes
+Current memory used: 66.69 M Bytes
+
+v3> q -f
+
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ exit
+exit
+
+Script done on Sun 15 May 2022 01:19:12 AM CST

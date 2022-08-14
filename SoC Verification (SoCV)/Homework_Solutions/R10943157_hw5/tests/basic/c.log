@@ -1,0 +1,70 @@
+Script started on Sun 15 May 2022 01:19:19 AM CST
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ exit./satv -File b.dofile [1P[1@c[C[C[C[C[C[C
+v3> read rtl c.v
+
+v3> blast ntk
+
+v3> satv itp -o 0
+
+Monitor "z0" is violated.
+0: 0
+
+v3> usage
+Period time used : 0 seconds
+Total time used  : 0 seconds
+Peak memory used   : 9.621 M Bytes
+Total memory used  : 3.297 M Bytes
+Current memory used: 11.8 M Bytes
+
+v3> satv itp -o 1
+
+Monitor "z1" is violated.
+0: 0
+1: 1
+2: 0
+3: 1
+4: 0
+5: x
+
+v3> usage
+Period time used : 0.01 seconds
+Total time used  : 0.01 seconds
+Peak memory used   : 9.621 M Bytes
+Total memory used  : 3.426 M Bytes
+Current memory used: 11.93 M Bytes
+
+v3> satv itp -o 2
+
+Monitor "z2" is violated.
+0: 1
+1: 1
+2: 0
+3: 1
+4: 0
+5: 1
+6: x
+
+v3> usage
+Period time used : 0.01 seconds
+Total time used  : 0.02 seconds
+Peak memory used   : 9.621 M Bytes
+Total memory used  : 3.426 M Bytes
+Current memory used: 11.93 M Bytes
+
+v3> satv itp -o 3
+
+Monitor "z3" is safe.
+
+v3> usage
+Period time used : 0 seconds
+Total time used  : 0.02 seconds
+Peak memory used   : 9.621 M Bytes
+Total memory used  : 3.426 M Bytes
+Current memory used: 11.93 M Bytes
+
+v3> q -f
+
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ exit
+exit
+
+Script done on Sun 15 May 2022 01:19:28 AM CST

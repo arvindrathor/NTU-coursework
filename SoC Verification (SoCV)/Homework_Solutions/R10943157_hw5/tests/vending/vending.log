@@ -1,0 +1,82 @@
+Script started on Sun 15 May 2022 01:10:47 AM CST
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ ./satv -File vending.dofile 
+v3> read rtl vending.v
+
+v3> blast ntk
+
+v3> satv itp -o 0
+
+Monitor "p" is violated.
+0: 10101101110
+1: 11000110001
+2: 10000011101
+3: 11101101101
+4: 10110111111
+5: 01100011001
+6: 11001001101
+7: 00011001111
+8: 01100110001
+9: xxxxxxxxxxx
+
+v3> usage
+Period time used : 1.8 seconds
+Total time used  : 1.8 seconds
+Peak memory used   : 21.73 M Bytes
+Total memory used  : 12.38 M Bytes
+Current memory used: 20.88 M Bytes
+
+v3> satv itp -o 1
+
+Monitor "checkforinitialized" is violated.
+0: 11111111111
+1: xxxxxxxxxxx
+
+v3> usage
+Period time used : 0.04 seconds
+Total time used  : 1.84 seconds
+Peak memory used   : 21.73 M Bytes
+Total memory used  : 12.38 M Bytes
+Current memory used: 20.88 M Bytes
+
+v3> satv itp -o 2
+
+Monitor "checkcorrectchange" is violated.
+0: 01111011000
+1: 11001101001
+2: 10000101001
+3: 11001000111
+4: 00001101111
+5: 00101011011
+6: 01101010011
+7: 11110101111
+8: 00111011111
+9: xxxxxxxxxxx
+
+v3> usage
+Period time used : 2.13 seconds
+Total time used  : 3.97 seconds
+Peak memory used   : 22.93 M Bytes
+Total memory used  : 11.86 M Bytes
+Current memory used: 20.37 M Bytes
+
+v3> read rtl vending-fixed.v
+
+v3> blast ntk
+
+v3> satv itp -o 0
+
+Monitor "checkforinitialized" is safe.
+
+v3> usage
+Period time used : 0.15 seconds
+Total time used  : 4.12 seconds
+Peak memory used   : 22.93 M Bytes
+Total memory used  : 11.86 M Bytes
+Current memory used: 20.37 M Bytes
+
+v3> satv itp -o 1
+^C
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ exit
+exit
+
+Script done on Sun 15 May 2022 01:12:15 AM CST

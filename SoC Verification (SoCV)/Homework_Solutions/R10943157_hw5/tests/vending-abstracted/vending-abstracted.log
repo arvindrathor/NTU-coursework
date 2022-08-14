@@ -1,0 +1,120 @@
+Script started on Sun 15 May 2022 01:13:59 AM CST
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ exit./satv -File vending.dofile [C[1@-[1@a[1@b[8@stracted[C[C[C[C[C[C[C[C
+v3> read rtl vending-abstracted.v
+
+v3> blast ntk
+
+v3> satv itp -o 0
+
+Monitor "p" is violated.
+0: 100110
+1: 100111
+2: 111001
+3: 101111
+4: 101101
+5: 101001
+6: 101011
+7: 100111
+8: 101111
+9: 110001
+10: 110001
+11: 101101
+12: 110001
+13: 100111
+14: 100101
+15: 101001
+16: 100001
+17: xxxxxx
+
+v3> usage
+Period time used : 7.78 seconds
+Total time used  : 7.78 seconds
+Peak memory used   : 23.37 M Bytes
+Total memory used  : 7.164 M Bytes
+Current memory used: 15.67 M Bytes
+
+v3> satv itp -o 1
+
+Monitor "checkforinitialized" is violated.
+0: 111111
+1: xxxxxx
+
+v3> usage
+Period time used : 0.01 seconds
+Total time used  : 7.79 seconds
+Peak memory used   : 23.37 M Bytes
+Total memory used  : 7.164 M Bytes
+Current memory used: 15.67 M Bytes
+
+v3> satv itp -o 2
+
+Monitor "checkcorrectchange" is violated.
+0: 111110
+1: 100111
+2: 110111
+3: 110011
+4: 110101
+5: 110101
+6: 110001
+7: 100111
+8: 101101
+9: 100101
+10: 111101
+11: 110001
+12: 111001
+13: 100011
+14: 110001
+15: 001111
+16: 100101
+17: xxxxxx
+
+v3> usage
+Period time used : 7.92 seconds
+Total time used  : 15.71 seconds
+Peak memory used   : 24.01 M Bytes
+Total memory used  : 10.12 M Bytes
+Current memory used: 18.62 M Bytes
+
+v3> read rtl vending-abstracted-fixed.v
+
+v3> blast ntk
+
+v3> satv itp -o 0
+
+Monitor "p" is safe.
+
+v3> usage
+Period time used : 1.27 seconds
+Total time used  : 16.98 seconds
+Peak memory used   : 24.01 M Bytes
+Total memory used  : 10.12 M Bytes
+Current memory used: 18.62 M Bytes
+
+v3> satv itp -o 1
+
+Monitor "checkforinitialized" is safe.
+
+v3> usage
+Period time used : 0.02 seconds
+Total time used  : 17 seconds
+Peak memory used   : 24.01 M Bytes
+Total memory used  : 10.12 M Bytes
+Current memory used: 18.62 M Bytes
+
+v3> satv itp -o 2
+
+Monitor "checkcorrectchange" is safe.
+
+v3> usage
+Period time used : 1.26 seconds
+Total time used  : 18.26 seconds
+Peak memory used   : 24.01 M Bytes
+Total memory used  : 10.12 M Bytes
+Current memory used: 18.62 M Bytes
+
+v3> q -f
+
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ exit
+exit
+
+Script done on Sun 15 May 2022 01:14:31 AM CST

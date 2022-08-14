@@ -1,0 +1,56 @@
+Script started on Sun 15 May 2022 01:16:48 AM CST
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ ./satv -File a.dofile 
+v3> read rtl a.v
+
+v3> blast ntk
+
+v3> satv itp -o 0
+
+Monitor "z1" is safe.
+
+v3> usage
+Period time used : 0.07 seconds
+Total time used  : 0.07 seconds
+Peak memory used   : 9.785 M Bytes
+Total memory used  : 3.688 M Bytes
+Current memory used: 12.19 M Bytes
+
+v3> satv itp -o 1
+
+Monitor "z2" is safe.
+
+v3> usage
+Period time used : 0.05 seconds
+Total time used  : 0.12 seconds
+Peak memory used   : 10.15 M Bytes
+Total memory used  : 3.891 M Bytes
+Current memory used: 12.39 M Bytes
+
+v3> satv itp -o 2
+
+Monitor "z3" is safe.
+
+v3> usage
+Period time used : 0.06 seconds
+Total time used  : 0.18 seconds
+Peak memory used   : 10.15 M Bytes
+Total memory used  : 3.891 M Bytes
+Current memory used: 12.39 M Bytes
+
+v3> satv itp -o 3
+
+Monitor "z4" is safe.
+
+v3> usage
+Period time used : 0.02 seconds
+Total time used  : 0.2 seconds
+Peak memory used   : 10.15 M Bytes
+Total memory used  : 3.766 M Bytes
+Current memory used: 12.27 M Bytes
+
+v3> q -f
+
+]0;mikasa@cthulhu: ~/socv/hw5/tests/basic[01;32mmikasa@cthulhu[00m:[01;34m~/socv/hw5/tests/basic[00m$ exit
+exit
+
+Script done on Sun 15 May 2022 01:16:59 AM CST
