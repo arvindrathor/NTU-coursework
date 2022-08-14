@@ -1,0 +1,24 @@
+read rtl tests/vending-fixed.v
+blast ntk
+print ntk
+bsetorder -file
+bconstruct -all
+pinit init
+ptrans ti t
+pimage -next 10
+pcheckp -o 2
+pcheckp -o 1
+pcheckp -o 0
+pimage -next 10
+pcheckp -o 2
+pcheckp -o 1
+pcheckp -o 0
+pimage -next 10
+pcheckp -o 2
+pcheckp -o 1
+pcheckp -o 0
+pimage -next 10
+pcheckp -o 2
+pcheckp -o 1
+pcheckp -o 0
+quit -f
